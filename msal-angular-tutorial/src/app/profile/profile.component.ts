@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const GRAPH_ENDPOINT = 'https://graph.microsoft.com';
+const GRAPH_ENDPOINT = 'api://ee153cf7-6c9c-4464-8ee7-98166b017389';
 
 type ProfileType = {
   givenName?: string,
