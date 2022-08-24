@@ -43,12 +43,12 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     }), {
       interactionType: InteractionType.Redirect,
       authRequest: {
-        scopes: ['access_as_user']
+        scopes: ['user.read']
       }
     }, {
       interactionType: InteractionType.Redirect, // MSAL Interceptor Configuration
       protectedResourceMap: new Map([
-        ['api://ee153cf7-6c9c-4464-8ee7-98166b017389', ['access_as_user']]
+        ['api://ee153cf7-6c9c-4464-8ee7-98166b017389', ['user.read']]
       ])
     })
   ],
