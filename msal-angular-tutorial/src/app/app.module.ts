@@ -33,7 +33,7 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     MsalModule.forRoot( new PublicClientApplication({
       auth: {
         clientId: 'ee153cf7-6c9c-4464-8ee7-98166b017389', // Application (client) ID from the app registration
-        authority: 'de810bec-18a3-479a-8c6f-185945c981d3', // The Azure cloud instance and the app's sign-in audience (tenant ID, common, organizations, or consumers)
+        authority: 'https://login.microsoftonline.com/de810bec-18a3-479a-8c6f-185945c981d3', // The Azure cloud instance and the app's sign-in audience (tenant ID, common, organizations, or consumers)
         redirectUri: 'http://localhost:4207/'// This is your redirect URI
       },
       cache: {
@@ -48,7 +48,7 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     }, {
       interactionType: InteractionType.Redirect, // MSAL Interceptor Configuration
       protectedResourceMap: new Map([
-        ['https://graph.microsoft.com', ['access_as_user']]
+        ['api://ee153cf7-6c9c-4464-8ee7-98166b017389', ['access_as_user']]
       ])
     })
   ],
